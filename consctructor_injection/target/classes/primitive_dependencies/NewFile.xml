@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+<!-- 3 WAYS TO INJECTING DEPENDENCIES 
+(1) VALUE AS ELEMENT  (2) VALUE AS ATTRIBUTE  (3) VALUE USING C-SCHEMA -->
+
+
+        <!-- INJECTING DEPENDENCIES ORDER BY -->
+    
+    
+    <!--  INJECTING DEPENDENCIES VALUE AS ELEMENT -->
+    <bean name="first_object" class="primitive_dependencies.Employee">
+    <constructor-arg> <value>101</value> </constructor-arg>
+    <constructor-arg> <value>TOM</value></constructor-arg>
+    </bean>
+    
+    <!--  INJECTING DEPENDENCIES VALUE AS ATTRIBUTE -->
+    <bean name="second_object" class="primitive_dependencies.Employee">
+    <constructor-arg value="201"> </constructor-arg>
+    <constructor-arg value="JERRY"> </constructor-arg>
+    </bean>
+    
+    
+    <!-- INJECTING DEPENDENCIES VALUES As C-Schema --> 
+    <bean name="third_object" class="primitive_dependencies.Employee"
+    c:empId="301" c:empName="JULLIET">
+    </bean>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+	
+
+</beans>
