@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean name="vehicle" class="object_dependencies_1.Vehicle">
+    
+    <property name="car">
+    <bean name="car" class="object_dependencies_1.Car"
+    p:car_id="101" p:car_name="maruti 800"></bean>
+    </property>
+    
+    <property name="bike">
+    <bean name="bike" class="object_dependencies_1.Bike"
+    p:bike_id="201" p:bike_name="pulshar"></bean>
+    </property>
+    
+    
+    </bean>
+</beans>
